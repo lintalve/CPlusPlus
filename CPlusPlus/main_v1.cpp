@@ -1,11 +1,10 @@
-
+#include "Classes.h"
 #include <iostream>
-
+#include <unistd.h>
 
 using namespace std;
 
 const int i = 34;
-const int j(34);
 const int* someDoublePtr = &i;
 
 
@@ -18,7 +17,7 @@ int main(int argc, const char * argv[]) {
     const char * s = "this is some shitty shitterson";
     puts(s);
     
-    printf("%i", 234);  //I think, that compiler puts the value of someConstInt at
+    printf("%i", someConstInt);  //I think, that compiler puts the value of someConstInt at
                                  //compile time
     
     
@@ -35,7 +34,7 @@ int main(int argc, const char * argv[]) {
     
     for(int i=0; i<6; i++){
         std::cout << someDoublePtr << std::endl;
-        //usleep(10000);
+        usleep(10000);
     }
     
     return 0;
